@@ -1,0 +1,20 @@
+.task {
+  margin:10px;
+  padding:10px;
+  -webkit-box-shadow: 1px 1px 5px 2px rgba(145,138,145,0.5);
+  -moz-box-shadow: 1px 1px 5px 2px rgba(145,138,145,0.5);
+  box-shadow: 1px 1px 5px 2px rgba(145,138,145,0.5);
+}
+
+.task.complete {
+  background-color: #abdbc8;
+}
+
+.task.pending {
+  background-color: #e3c486;
+}
+
+.task h3 {
+  font-size: 16px;
+  margin: 5px;
+}

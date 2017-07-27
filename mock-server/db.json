@@ -1,0 +1,70 @@
+{
+  "tasks": [
+    {
+      "id": 1500747989051,
+      "catagory": "PERSONAL",
+      "description": "new personal task",
+      "dueDate": "21-07-17",
+      "complete": true
+    },
+    {
+      "id": 1500806775786,
+      "catagory": "WORK",
+      "description": "work for demo",
+      "dueDate": "10-08-17",
+      "complete": true
+    },
+    {
+      "id": 1500807296975,
+      "catagory": "SOCIAL",
+      "description": "Add new celebration",
+      "dueDate": "11-09-17",
+      "complete": true
+    },
+    {
+      "id": 1500807342063,
+      "catagory": "PERSONAL",
+      "description": "complete assignment",
+      "dueDate": "10-12-17",
+      "complete": true
+    },
+    {
+      "id": 1500807629805,
+      "catagory": "SOCIAL",
+      "description": "new task updated",
+      "dueDate": "10-11-19"
+    },
+    {
+      "id": 1501129079018,
+      "catagory": "PERSONAL",
+      "description": "This is the task with new UI.",
+      "dueDate": "2017-07-21"
+    },
+    {
+      "id": 1501139364967,
+      "catagory": "PERSONAL",
+      "description": "This is a personal meeting",
+      "dueDate": "2017-07-28"
+    }
+  ],
+  "catagories": [
+    {
+      "id": 1,
+      "code": "PERSONAL",
+      "description": "Personal"
+    },
+    {
+      "id": 1,
+      "code": "WORK",
+      "description": "Work"
+    },
+    {
+      "id": 1,
+      "code": "SOCIAL",
+      "description": "Social"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
