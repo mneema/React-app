@@ -3,6 +3,8 @@ import {FILTER_TASK_LIST} from './../constants/filter.constants'
 import fetch from 'isomorphic-fetch'
 import { push , replace } from 'react-router-redux'
 
+const BASE_URL = "http://localhost:4000";
+
 export const addTaskRequest = () => {
   return {
     type: ADD_TASK_REQUEST,
@@ -76,7 +78,7 @@ function receiveTask(json) {
 export function fetchTask(id) {
   return dispatch => {
     dispatch(requestTask())
-    return fetch(`http://localhost:3000/tasks/${id}`)
+    return fetch(`${BASE_URL}/tasks/${id}`)
       .then(response => response.json())
       .then(json => dispatch(receiveTask(json)))
   }
@@ -101,7 +103,7 @@ function receiveTasks(json) {
 export function fetchTasks() {
   return dispatch => {
     dispatch(requestTasks())
-    return fetch(`http://localhost:3000/tasks`)
+    return fetch(`${BASE_URL}/tasks`)
       .then(response => response.json())
       .then(json => dispatch(receiveTasks(json)))
   }
@@ -125,7 +127,7 @@ function receiveCatagories(json) {
 function fetchCatagories() {
   return dispatch => {
     dispatch(requestCatagories())
-    return fetch(`http://localhost:3000/catagories`)
+    return fetch(`${BASE_URL}/catagories`)
       .then(response => response.json())
       .then(json => dispatch(receiveCatagories(json)))
   }
@@ -151,7 +153,7 @@ export function fetchCatagoriesIfNeeded() {
 export function addTask(task) {
   return dispatch => {
     dispatch(addTaskRequest())
-    return fetch(`http://localhost:3000/tasks`,{
+    return fetch(`${BASE_URL}/tasks`,{
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -167,7 +169,7 @@ export function addTask(task) {
 export function updateTask(task) {
   return dispatch => {
     dispatch(updateTaskRequest())
-    return fetch(`http://localhost:3000/tasks/${task.id}`,{
+    return fetch(`${BASE_URL}/tasks/${task.id}`,{
       method: 'PUT',
       headers: {
         'Accept': 'application/json',
@@ -184,7 +186,7 @@ export function updateTask(task) {
 export function deleteTask(id) {
   return dispatch => {
     dispatch(deleteTaskRequest())
-    return fetch(`http://localhost:3000/tasks/${id}`,{
+    return fetch(`${BASE_URL}/tasks/${id}`,{
       method: 'DELETE',
       headers: {
         'Accept': 'application/json',
@@ -201,7 +203,7 @@ export function completeTask(task) {
   return dispatch => {
     dispatch(completeTaskRequest())
     let modifiedTask = Object.assign({},task,{complete:true});
-    return fetch(`http://localhost:3000/tasks/${task.id}`,{
+    return fetch(`${BASE_URL}/tasks/${task.id}`,{
       method: 'PUT',
       headers: {
         'Accept': 'application/json',

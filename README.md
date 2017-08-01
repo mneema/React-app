@@ -17,7 +17,7 @@ Below you will find some information on how to perform common tasks.<br>
   - install json-server globally using 'npm install -g json-server'.
   - install storybook CLI using 'npm i -g @storybook/cli'.
   - run 'npm install' to install all dependencies.
-  - go to mock-server directory and open a terminal and run 'json-server -w db.json' to run the mock server.
+  - go to mock-server directory and open a terminal and run 'json-server -w -p 4000 db.json' to run the mock server.
   - run 'npm start' to run the react app from another terminal.
 
 ## Available Scripts
