@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  tw-flight-app:
+    image: tw-flight-app
+    build: .
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
